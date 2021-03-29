@@ -1,0 +1,15 @@
+{
+  "name": "lossless-ops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Peter Popov <p.dim.popov@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "turbolizer": "^0.2.0"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "traceEvents": [
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680775265,
+      "tts": 0,
+      "ph": "B",
+      "cat": "v8",
+      "name": "V8.NewContext",
+      "dur": 0,
+      "tdur": 0,
+      "args": {}
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680780294,
+      "tts": 0,
+      "ph": "E",
+      "cat": "v8",
+      "name": "V8.NewContext",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "runtime-call-stats": {}
+      }
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680780634,
+      "tts": 0,
+      "ph": "B",
+      "cat": "v8",
+      "name": "V8.ScriptCompiler",
+      "dur": 0,
+      "tdur": 0,
+      "args": {}
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680781313,
+      "tts": 0,
+      "ph": "E",
+      "cat": "v8",
+      "name": "V8.ScriptCompiler",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "runtime-call-stats": {}
+      }
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680781341,
+      "tts": 0,
+      "ph": "B",
+      "cat": "v8",
+      "name": "V8.Execute",
+      "dur": 0,
+      "tdur": 0,
+      "args": {}
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680842403,
+      "tts": 116649,
+      "ph": "B",
+      "cat": "devtools.timeline,v8",
+      "name": "MinorGC",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "usedHeapSizeBefore": 1891664,
+        "type": "allocation failure"
+      }
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680842431,
+      "tts": 116675,
+      "ph": "X",
+      "cat": "v8",
+      "name": "V8.GCScavenger",
+      "dur": 877,
+      "tdur": 878,
+      "args": {}
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680843374,
+      "tts": 117618,
+      "ph": "E",
+      "cat": "devtools.timeline,v8",
+      "name": "MinorGC",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "usedHeapSizeAfter": 917428
+      }
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680859918,
+      "tts": 133686,
+      "ph": "E",
+      "cat": "v8",
+      "name": "V8.Execute",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "runtime-call-stats": {}
+      }
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680859936,
+      "tts": 133702,
+      "ph": "B",
+      "cat": "v8",
+      "name": "V8.Task",
+      "dur": 0,
+      "tdur": 0,
+      "args": {}
+    },
+    {
+      "pid": 29180,
+      "tid": 17040,
+      "ts": 781680859939,
+      "tts": 133706,
+      "ph": "E",
+      "cat": "v8",
+      "name": "V8.Task",
+      "dur": 0,
+      "tdur": 0,
+      "args": {
+        "runtime-call-stats": {}
+      }
+    }
+  ]
+}
