@@ -6,13 +6,12 @@ const map1 = e => Math.sin(e);
 const filter2 = e => e > 0;
 
 class Lossless {
-    #array;
     #length = 0;
     #ops = [];
     #fns = [];
 
-    constructor(array) {
-        this.#array = array
+    constructor() {
+
     }
 
     map(fn) {
@@ -29,12 +28,15 @@ class Lossless {
         return this
     }
 
-    get() {
+    get(array) {
         const result = [];
+        const length = array.length
         let idx = 0;
-        elementIteration: for (let element of this.#array){
-            for (let i = 0; i < this.#length; i++) {
-                switch (this.#ops[i]) {
+
+        elementIteration: for (let i = 0; i < length; i++){
+            let element = array[i];
+            for (let op = 0; op < this.#length; op++) {
+                switch (this.#ops[op]) {
                     case LOSSLESS_OPERATIONS_MAP:
                         element = this.#fns[op](element);
                         break;
@@ -80,11 +82,11 @@ class Lossless {
 
 
 function losslessTest(arr) {
-    return new Lossless(arr)
+    return new Lossless()
         .filter(filter1)
         .map(map1)
         .filter(filter2)
-        .get()
+        .get(arr)
 }
 
 let losslessCodeGenFunction = new Lossless()
@@ -97,24 +99,6 @@ function losslessCodeGen(arr) {
     return losslessCodeGenFunction(arr);
 }
 
-if (typeof module !== 'undefined') {
-    // module.exports = losslessTest;
-    module.exports = losslessCodeGen;
-} else {
-<<<<<<< HEAD
-    const a = Array(100000).fill(0).map((e, i) => i)
-=======
-   
 
-    const a = Array(100).fill(0).map((e, i) => i)
->>>>>>> 2bc4acd (Better benchmarking.)
-
-    let losslessResult;
-    const iterations = 10000;
-
-    for(let i = 0; i < iterations; i++) {
-        losslessResult = losslessTest(a);
-    }
-
-    console.log(JSON.stringify(losslessResult, null, '  '));
-}
+// module.exports = losslessTest;
+module.exports = losslessCodeGen;
