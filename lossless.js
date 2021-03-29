@@ -2,40 +2,40 @@ const LOSSLESS_OPERATIONS_MAP = 1;
 const LOSSLESS_OPERATIONS_FILTER = 2;
 
 class Lossless {
-    #array;
-    #length = 0;
-    #ops = [];
-    #fns = [];
+    array;
+    length = 0;
+    ops = [];
+    fns = [];
 
     constructor(array) {
-        this.#array = array
+        this.array = array
     }
 
     map(fn) {
-        this.#ops[this.#length] = (LOSSLESS_OPERATIONS_MAP)
-        this.#fns[this.#length] = (fn)
-        this.#length++
+        this.ops[this.length] = (LOSSLESS_OPERATIONS_MAP)
+        this.fns[this.length] = (fn)
+        this.length++
         return this
     }
 
     filter(fn) {
-        this.#ops[this.#length] = (LOSSLESS_OPERATIONS_FILTER)
-        this.#fns[this.#length] = (fn)
-        this.#length++
+        this.ops[this.length] = (LOSSLESS_OPERATIONS_FILTER)
+        this.fns[this.length] = (fn)
+        this.length++
         return this
     }
 
     get() {
         const result = [];
         let idx = 0;
-        elementIteration: for (let element of this.#array){
-            for (let i = 0; i < this.#length; i++) {
-                switch (this.#ops[i]) {
+        elementIteration: for (let element of this.array){
+            for (let i = 0; i < this.length; i++) {
+                switch (this.ops[i]) {
                     case LOSSLESS_OPERATIONS_MAP:
-                        element = this.#fns[i](element);
+                        element = this.fns[i](element);
                         break;
                     case LOSSLESS_OPERATIONS_FILTER:
-                        if (!this.#fns[i](element)) {
+                        if (!this.fns[i](element)) {
                             continue elementIteration;
                         }
                         break;
