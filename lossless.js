@@ -95,10 +95,9 @@ let losslessCodeGenFunction = new Lossless()
     .filter(filter2)
     .getFunction()
 
-function losslessCodeGen(arr) {
+function losslessCodeGenTest(arr) {
     return losslessCodeGenFunction(arr);
 }
 
 
-// module.exports = losslessTest;
-module.exports = losslessCodeGen;
+module.exports = [ losslessTest, losslessCodeGenTest ];

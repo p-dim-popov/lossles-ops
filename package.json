@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "try1111": "node --expose-gc index.js > result.csv"
+    "try": "node --expose-gc index.js > result.csv"
   },
   "keywords": [],
   "author": "Peter Popov <p.dim.popov@gmail.com>",
